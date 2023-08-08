@@ -26,7 +26,7 @@ dificulade= int (input("Escola um nível de dificuldade: Facíl(1), Médio(2), Dífi
 if tema==1:
     print("Você escolheu o tema cidades!")
     if dificulade==1:
-        nun=randint(0,3)
+        nun=randint(0,2)
         palavra1=cidadesF[nun]
     elif dificulade==2:
         nun=randint(0,4)
@@ -56,7 +56,7 @@ if tema==1:
 elif tema==2:
     print("Você escolheu o tema cores!")
     if dificulade==1:
-        nun=randint(0,3)
+        nun=randint(0,2)
         palavra1=coresF[nun]
     elif dificulade==2:
         nun=randint(0,4)
@@ -84,7 +84,7 @@ elif tema==2:
 elif tema==3:
     print("Você escolheu o tema times!")
     if dificulade==1:
-        nun=randint(0,3)
+        nun=randint(0,2)
         palavra1=timesF[nun]
     elif dificulade==2:
         nun=randint(0,4)
@@ -113,7 +113,7 @@ elif tema==3:
 elif tema==4:
     print("Você escolheu o tema países!")
     if dificulade==1:
-        nun=randint(0,3)
+        nun=randint(0,2)
         palavra1=paisesF[nun]
     elif dificulade==2:
         nun=randint(0,4)
