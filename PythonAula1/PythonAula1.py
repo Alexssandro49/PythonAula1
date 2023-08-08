@@ -1,19 +1,42 @@
 #encoding: latin-1
+from distutils import core
 from random import randint
 from random import sample
 
-cidades="joinville","garuva","itapoá","curitiba","araquari"
-cores='vermelho','azul', 'amarelo','rosa','preto'
-times='flamengo','corinthias','vasco','palmeiras','fluminense'
-paises='brasil','estados unidos', 'frança','portugal','itália'
+cidadesF="são paulo","pará","kansas"
+cidadesM="joinville","garuva","itapoá","curitiba","araquari"
+cidadesD="washington","rio de janeiro","vaticano","guatemala","méxico","nova guíne","salvador"
+
+coresF='azul','rosa','preto'
+coresM='vermelho','laranja','amarelo','esmeralda','preto'
+coresD='vermelho','laranja','carmesim','esmeralda','preto','turquesa','água-marinha'
+
+timesF='jec','vasco','palmeiras'
+timesM='fluminense','avai','gremio','sport','bahia'
+timesD='chelsea','flamengo','barcelona','internacional','corinthians','são paulo','palmeiras'
+
+paisesF='brasil','estados unidos', 'frança'
+paisesM='portugal','itália','cingapura','vaticano','iraque'
+paisesD='espanha','méxico','rússia','ucrânia','eslováquia','cingapura','brasil'
+
 animo=['Temos mais uma, não desista','Eu sei que consegue','Vamos, temos chance','vamos, não desista','De primeira e difícil, mais uma']
 print("Embaralhando palavras!")
-print("Escolha o número correspondente ao tema: cidades(1), cores(2), times(3), países(4)")
-op = input()
-if op=="1":
+tema=int(input("Escolha o número correspondente ao tema: cidades(1), cores(2), times(3), países(4): "))
+dificulade= int (input("Escola um nível de dificuldade: Facíl(1), Médio(2), Díficio(3): "))
+if tema==1:
     print("Você escolheu o tema cidades!")
-    nun=randint(0,4)
-    palavra1=cidades[nun]
+    if dificulade==1:
+        nun=randint(0,3)
+        palavra1=cidadesF[nun]
+    elif dificulade==2:
+        nun=randint(0,4)
+        palavra1=cidadesM[nun]
+    elif dificulade==3:
+        nun=randint(0,6)
+        palavra1=cidadesD[nun]
+    else:
+       raise Exception("Dificuldade está fora do intervalo!")
+
     palavra = sample(palavra1,len(palavra1))
     count=5
     for x in range(5):
@@ -30,10 +53,19 @@ if op=="1":
     else:
         print("Máximo de tentativas atingido! A palavra era:",palavra1) 
         
-elif op=="2":
+elif tema==2:
     print("Você escolheu o tema cores!")
-    nun=randint(0,4)
-    palavra1=cores[nun]
+    if dificulade==1:
+        nun=randint(0,3)
+        palavra1=coresF[nun]
+    elif dificulade==2:
+        nun=randint(0,4)
+        palavra1=coresM[nun]
+    elif dificulade==3:
+        nun=randint(0,6)
+        palavra1=coresD[nun]
+    else:
+       raise Exception("Dificuldade está fora do intervalo!")
     palavra = sample(palavra1,len(palavra1))
     count=5
     for x in range(5):
@@ -49,10 +81,20 @@ elif op=="2":
             break   
     else:
         print("Máximo de tentativas atingido! A palavra era:",palavra1) 
-elif op=="3":
+elif tema==3:
     print("Você escolheu o tema times!")
-    nun=randint(0,4)
-    palavra1=times[nun]
+    if dificulade==1:
+        nun=randint(0,3)
+        palavra1=timesF[nun]
+    elif dificulade==2:
+        nun=randint(0,4)
+        palavra1=timesM[nun]
+    elif dificulade==3:
+        nun=randint(0,6)
+        palavra1=timesD[nun]
+    else:
+       raise Exception("Dificuldade está fora do intervalo!")
+
     palavra = sample(palavra1,len(palavra1))
     count=5
     for x in range(5):
@@ -68,10 +110,19 @@ elif op=="3":
             break   
     else:
         print("Máximo de tentativas atingido! A palavra era:",palavra1) 
-elif op=="4":
+elif tema==4:
     print("Você escolheu o tema países!")
-    nun=randint(0,4)
-    palavra1=paises[nun]
+    if dificulade==1:
+        nun=randint(0,3)
+        palavra1=paisesF[nun]
+    elif dificulade==2:
+        nun=randint(0,4)
+        palavra1=paisesM[nun]
+    elif dificulade==3:
+        nun=randint(0,6)
+        palavra1=paisesD[nun]
+    else:
+       raise Exception("Dificuldade está fora do intervalo!")
     palavra = sample(palavra1,len(palavra1))
     count=5
     for x in range(5):
