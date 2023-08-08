@@ -3,7 +3,7 @@ from distutils import core
 from random import randint
 from random import sample
 
-cidadesF="são paulo","pará","kansas"
+cidadesF="bahia","pará","kansas"
 cidadesM="joinville","garuva","itapoá","curitiba","araquari"
 cidadesD="washington","rio de janeiro","vaticano","guatemala","méxico","nova guíne","salvador"
 
